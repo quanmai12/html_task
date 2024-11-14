@@ -7,10 +7,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>register</title>
     <link rel="stylesheet" href="css/home.css">
+
 </head>
 
 <body>
-    <div class="container" id="container" style="display: block;">
+    <header>
+        <div class="header-logo">
+            <a href="https://aptech.fpt.edu.vn/" target="_blank"><img src="img/ftp-logo.png" alt="fptlogo"></a>
+            <h1 class="header-title">T2409M</h1>
+        </div>
+
+    </header>
+    <div class="banner">
+        <img src="/img/banner.png" alt="banner" class="banner-image" id="bannerImage">
+    </div>
+    <div class="container" id="container">
         <div class="register-title">
             <h2>Create Acount</h2>
             <p>get started with free account</p>
@@ -28,49 +39,67 @@
         <form action="" name="registerForm">
             <div class="form-group">
                 <i class="fa fa-user icon"></i>
-                <input type="text" name="fullname" id="fullname" placeholder="Full name">
+                <input type="text" name="fullname" id="fullname" placeholder="Full name" required>
                 <i style="display: none; color: green;" class="fa fa-check" aria-hidden="true"></i>
                 <i style="display: none; color: red;" class="fa fa-close" aria-hidden="true"></i>
+                <span id="fullnameError" class="error"></span>
+
             </div>
             <div class="form-group">
                 <i class="fa fa-envelope icon"></i>
-                <input type="email" name="email" id="email" placeholder="Email address">
+                <input type="email" name="email" id="email" placeholder="Email address" required>
                 <i style="display: none; color: green;" class="fa fa-check" aria-hidden="true"></i>
                 <i style="display: none; color: red;" class="fa fa-close" aria-hidden="true"></i>
+                <span id="emailError" class="error"></span>
+
+            </div>
+            <div class="form-group">
+                <i class="fa fa-lock icon"></i>
+                <input type="password" name="password" id="password" placeholder="Create password" required>
+                <i style="display: none; color: green;" class="fa fa-check" aria-hidden="true"></i>
+                <i style="display: none; color: red;" class="fa fa-close" aria-hidden="true"></i>
+                <span id="passwordError" class="error"></span>
+
+            </div>
+            <div class="form-group">
+                <i class="fa fa-lock icon"></i>
+                <input type="password" name="check-password" id="check-password" placeholder="Reapeat password" required>
+                <i style="display: none; color: green;" class="fa fa-check" aria-hidden="true"></i>
+                <i style="display: none; color: red;" class="fa fa-close" aria-hidden="true"></i>
+                <span id="CheckpasswordError" class="error"></span>
+
             </div>
             <div class="form-group">
                 <i class="fa fa-phone icon"></i>
-                <input type="tel" name="phone" id="phone" placeholder="+84">
+                <input type="tel" name="phone" id="phone" placeholder="+84" required>
                 <i style="display: none; color: green;" class="fa fa-check" aria-hidden="true"></i>
                 <i style="display: none; color: red;" class="fa fa-close" aria-hidden="true"></i>
+                <span id="phoneError" class="error"></span>
 
             </div>
             <div class="form-group">
-                <i class="fa fa-briefcase icon"></i>
-                <select name="jobtype" id="jobtype" class="form-control">
-                    <option value="0" selected=""> Select job type</option>
-                    <option value="1">Designer</option>
-                    <option value="2">Manager</option>
-                    <option value="3">Accaunting</option>
-                </select>
+                <i class="fa fa-mars-double icon"></i>
+                <select id="gender">
+                    <option value="">Chọn giới tính</option>
+                    <option value="Nam">Nam</option>
+                    <option value="Nữ">Nữ</option>
+                    <option value="Khác">Khác</option>
+                </select><br>
+                <span id="genderError" class="error"></span>
             </div>
+
             <div class="form-group">
-                <i class="fa fa-lock icon"></i>
-                <input type="password" name="password" id="password" placeholder="Create password">
-                <i style="display: none; color: green;" class="fa fa-check" aria-hidden="true"></i>
-                <i style="display: none; color: red;" class="fa fa-close" aria-hidden="true"></i>
+                <i class="fa fa-heart icon"></i>
+                <input type="text" id="hobbies" placeholder="your favorite..."><br>
 
             </div>
             <div class="form-group">
-                <i class="fa fa-lock icon"></i>
-                <input type="password" name="check-password" id="check-password" placeholder="Reapeat password">
-                <i style="display: none; color: green;" class="fa fa-check" aria-hidden="true"></i>
-                <i style="display: none; color: red;" class="fa fa-close" aria-hidden="true"></i>
+                <i class="fa fa-book icon"></i>
+                <textarea id="bio" placeholder="introduce.."></textarea><br>
 
             </div>
-            <div class="form-group">
-                <input type="submit" name="submit" class="submit-register">
-            </div>
+
+            <button type="button" onclick="submitForm()">Submit</button>
 
         </form>
 
@@ -78,16 +107,24 @@
             <p>Have an account? <a href="#">Log in</a></p>
         </div>
 
-        
+
     </div>
     <div id="result" style="display: none;">
-            <h2>Your Information</h2>
-            <p><strong>Full Name:</strong> <span id="displayFullName"></span></p>
-            <p><strong>Email:</strong> <span id="displayEmail"></span></p>
-            <p><strong>Phone:</strong> <span id="displayPhone"></span></p>
-            <p><strong>Job Type:</strong> <span id="displayJobType"></span></p>
-        </div>
-    <footer></footer>
+        <h2>Thông tin của bạn</h2>
+        <p><strong>Họ và tên:</strong> <span id="displayFullname"></span></p>
+        <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+        <p><strong>Số điện thoại:</strong> <span id="displayPhone"></span></p>
+        <p><strong>Giới tính:</strong> <span id="displayGender"></span></p>
+        <p><strong>Sở thích:</strong> <span id="displayHobbies"></span></p>
+        <p><strong>Giới thiệu bản thân:</strong> <span id="displayBio"></span></p>
+    </div>
+    <footer>
+        <p>
+            Họ tên:Mai Duy Quân <br>
+
+            Lớp: T2409M
+        </p>
+    </footer>
 </body>
 <!-- <script src="js/home.js"> -->
 <script src="js/home.js">
