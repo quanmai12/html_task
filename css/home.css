@@ -1,0 +1,260 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.container {
+    display: block;
+    width: 500px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+.register-title {
+    margin-bottom: 10px;
+}
+
+.register-title h2 {
+    margin: 0;
+    font-size: 30px;
+    color: black;
+}
+
+.register-title p {
+    margin: 0;
+    font-size: 15px;
+    color: black;
+}
+
+.social-login {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.social-login button {
+    flex: 1;
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+}
+
+.twitter-btn {
+    background-color: #1d20db;
+}
+
+.facebook-btn {
+    background-color: #0409ff;
+}
+
+
+.or {
+    position: relative;
+    text-align: center;
+    margin: 15px 0;
+    color: black;
+}
+
+.form-group {
+    margin: 1px ;
+    position: relative;
+    padding: 1px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 90%;
+    margin: 5px 0px;
+    padding: 7px 7px;
+    border: 1px solid #cacaca;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-group input[type=submit],
+.form-group input[type=button] {
+    padding: 15px 0px;
+    cursor: pointer;
+    background-color: #3604aa;
+    color: #ffffff;
+    border-color: #3604aa;
+}
+
+.form-group input[type=submit]:hover {
+    background-color: #051498;
+}
+
+.form-group input[type=button]:hover {
+    background-color: #000272;
+}
+
+.icon{
+    color: #3f3f3f;
+    width: auto;
+}
+.login-link {
+    display: block;
+    margin-top: 10px;
+    font-size: 15px;
+    text-decoration: none;
+    text-align: center;
+
+}
+
+.login-link a {
+    color: #0409ff;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+html {
+    font-family: "Lucida Sans", sans-serif;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+
+.msg-error {
+    color: red;
+}
+
+input.success {
+    border-color: green;
+}
+
+input.error {
+    border-color: red;
+    white-space: nowrap;
+
+}
+
+@media only screen and (min-width: 600px) {
+
+    /* For tablets: */
+    .col-s-1 {
+        width: 8.33%;
+    }
+
+    .col-s-2 {
+        width: 16.66%;
+    }
+
+    .col-s-3 {
+        width: 25%;
+    }
+
+    .col-s-4 {
+        width: 33.33%;
+    }
+
+    .col-s-5 {
+        width: 41.66%;
+    }
+
+    .col-s-6 {
+        width: 50%;
+    }
+
+    .col-s-7 {
+        width: 58.33%;
+    }
+
+    .col-s-8 {
+        width: 66.66%;
+    }
+
+    .col-s-9 {
+        width: 75%;
+    }
+
+    .col-s-10 {
+        width: 83.33%;
+    }
+
+    .col-s-11 {
+        width: 91.66%;
+    }
+
+    .col-s-12 {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    /* For desktop: */
+    .col-1 {
+        width: 8.33%;
+    }
+
+    .col-2 {
+        width: 16.66%;
+    }
+
+    .col-3 {
+        width: 25%;
+    }
+
+    .col-4 {
+        width: 33.33%;
+    }
+
+    .col-5 {
+        width: 41.66%;
+    }
+
+    .col-6 {
+        width: 50%;
+    }
+
+    .col-7 {
+        width: 58.33%;
+    }
+
+    .col-8 {
+        width: 66.66%;
+    }
+
+    .col-9 {
+        width: 75%;
+    }
+
+    .col-10 {
+        width: 83.33%;
+    }
+
+    .col-11 {
+        width: 91.66%;
+    }
+
+    .col-12 {
+        width: 100%;
+    }
+}

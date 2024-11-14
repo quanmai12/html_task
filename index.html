@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>register</title>
+    <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body>
+    <div class="container" id="container" style="display: block;">
+        <div class="register-title">
+            <h2>Create Acount</h2>
+            <p>get started with free account</p>
+        </div>
+        <div class="social-login">
+            <button class="twitter-btn">Login With Twitter</button>
+
+        </div>
+        <div class="social-login">
+            <button class="facebook-btn">Login With Facebook</button>
+        </div>
+
+        <p class="or">------or------</p>
+
+        <form action="" name="registerForm">
+            <div class="form-group">
+                <i class="fa fa-user icon"></i>
+                <input type="text" name="fullname" id="fullname" placeholder="Full name">
+                <i style="display: none; color: green;" class="fa fa-check" aria-hidden="true"></i>
+                <i style="display: none; color: red;" class="fa fa-close" aria-hidden="true"></i>
+            </div>
+            <div class="form-group">
+                <i class="fa fa-envelope icon"></i>
+                <input type="email" name="email" id="email" placeholder="Email address">
+                <i style="display: none; color: green;" class="fa fa-check" aria-hidden="true"></i>
+                <i style="display: none; color: red;" class="fa fa-close" aria-hidden="true"></i>
+            </div>
+            <div class="form-group">
+                <i class="fa fa-phone icon"></i>
+                <input type="tel" name="phone" id="phone" placeholder="+84">
+                <i style="display: none; color: green;" class="fa fa-check" aria-hidden="true"></i>
+                <i style="display: none; color: red;" class="fa fa-close" aria-hidden="true"></i>
+
+            </div>
+            <div class="form-group">
+                <i class="fa fa-briefcase icon"></i>
+                <select name="jobtype" id="jobtype" class="form-control">
+                    <option value="0" selected=""> Select job type</option>
+                    <option value="1">Designer</option>
+                    <option value="2">Manager</option>
+                    <option value="3">Accaunting</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <i class="fa fa-lock icon"></i>
+                <input type="password" name="password" id="password" placeholder="Create password">
+                <i style="display: none; color: green;" class="fa fa-check" aria-hidden="true"></i>
+                <i style="display: none; color: red;" class="fa fa-close" aria-hidden="true"></i>
+
+            </div>
+            <div class="form-group">
+                <i class="fa fa-lock icon"></i>
+                <input type="password" name="check-password" id="check-password" placeholder="Reapeat password">
+                <i style="display: none; color: green;" class="fa fa-check" aria-hidden="true"></i>
+                <i style="display: none; color: red;" class="fa fa-close" aria-hidden="true"></i>
+
+            </div>
+            <div class="form-group">
+                <input type="submit" name="submit" class="submit-register">
+            </div>
+
+        </form>
+
+        <div class="login-link">
+            <p>Have an account? <a href="#">Log in</a></p>
+        </div>
+
+        
+    </div>
+    <div id="result" style="display: none;">
+            <h2>Your Information</h2>
+            <p><strong>Full Name:</strong> <span id="displayFullName"></span></p>
+            <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+            <p><strong>Phone:</strong> <span id="displayPhone"></span></p>
+            <p><strong>Job Type:</strong> <span id="displayJobType"></span></p>
+        </div>
+    <footer></footer>
+</body>
+<!-- <script src="js/home.js"> -->
+<script src="js/home.js">
+
+</script>
+
+</html>
