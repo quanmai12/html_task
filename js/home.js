@@ -110,10 +110,12 @@ function validateForm() {
 }
 
 
-function submitForm() {
+function SubmitForm() {
     if(validateForm()){
-        document.getElementById("registerForm").style.display = "none";
-        document.getElementById("result").style.display = "block";
+        const container = document.getElementById("container");
+        const result = document.getElementById("result");
+        container.setAttribute("style", "display: none");
+        result.setAttribute("style", "display: block");
 
         document.getElementById("displayFullname").textContent = document.getElementById("fullname").value;
         document.getElementById("displayEmail").textContent = document.getElementById("email").value;

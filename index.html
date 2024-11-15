@@ -99,8 +99,10 @@
 
             </div>
 
-            <button type="button" onclick="submitForm()">Submit</button>
-
+            <button type="button" onclick="SubmitForm()">Submit</button>
+            <div class="form-group">
+                <input type="button" name="button" id="button" onclick="submitForm()" value="Submit">
+            </div>
         </form>
 
         <div class="login-link">
@@ -109,26 +111,25 @@
 
 
     </div>
-    <div id="result" style="display: none;">
-        <h2>Thông tin của bạn</h2>
-        <p><strong>Họ và tên:</strong> <span id="displayFullname"></span></p>
+    <div id="result" style="display: none;" class="result">
+        <h2>Your Information</h2>
+        <p><strong>Full Name:</strong> <span id="displayFullname"></span></p>
         <p><strong>Email:</strong> <span id="displayEmail"></span></p>
-        <p><strong>Số điện thoại:</strong> <span id="displayPhone"></span></p>
-        <p><strong>Giới tính:</strong> <span id="displayGender"></span></p>
-        <p><strong>Sở thích:</strong> <span id="displayHobbies"></span></p>
-        <p><strong>Giới thiệu bản thân:</strong> <span id="displayBio"></span></p>
+        <p><strong>Telephone:</strong> <span id="displayPhone"></span></p>
+        <p><strong>Gender:</strong> <span id="displayGender"></span></p>
+        <p><strong>Favorite:</strong> <span id="displayHobbies"></span></p>
+        <p><strong>Introduce:</strong> <span id="displayBio"></span></p>
     </div>
     <footer>
         <p>
             Họ tên:Mai Duy Quân <br>
-
+            Email: maiquanxt4@gmail.com <br>
             Lớp: T2409M
         </p>
     </footer>
 </body>
 <!-- <script src="js/home.js"> -->
 <script src="js/home.js">
-
 </script>
 
 </html>
