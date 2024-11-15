@@ -196,6 +196,24 @@ footer p{
     background-color: #000272;
 }
 
+.checkbox{
+    width: 90%;
+    display: flex;
+}
+.checkbox i{
+    margin-left: 10px;
+}
+
+.form-group .checkbox input[type=checkbox]{
+    width: 20px;
+    margin: 0 5px 2px 10px;
+}
+
+.form-group .checkbox input[type=text]{
+    padding: 1px;
+    margin: 1px;
+    width: 100%;
+}
 .icon {
     color: #3f3f3f;
     width: auto;

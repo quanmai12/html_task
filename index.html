@@ -19,7 +19,7 @@
 
     </header>
     <div class="banner">
-        <img src="/img/banner.png" alt="banner" class="banner-image" id="bannerImage">
+        <img src="img/banner.png" alt="banner" class="banner-image" id="bannerImage">
     </div>
     <div class="container" id="container">
         <div class="register-title">
@@ -27,11 +27,12 @@
             <p>get started with free account</p>
         </div>
         <div class="social-login">
-            <button class="twitter-btn">Login With Twitter</button>
+            <button class="twitter-btn"><i class="fa fa-twitter"></i> Login With Twitter</button>
 
         </div>
         <div class="social-login">
-            <button class="facebook-btn">Login With Facebook</button>
+
+            <button class="facebook-btn"><i class="fa fa-facebook"></i> Login With Facebook</button>
         </div>
 
         <p class="or">------or------</p>
@@ -63,7 +64,8 @@
             </div>
             <div class="form-group">
                 <i class="fa fa-lock icon"></i>
-                <input type="password" name="check-password" id="check-password" placeholder="Reapeat password" required>
+                <input type="password" name="check-password" id="check-password" placeholder="Reapeat password"
+                    required>
                 <i style="display: none; color: green;" class="fa fa-check" aria-hidden="true"></i>
                 <i style="display: none; color: red;" class="fa fa-close" aria-hidden="true"></i>
                 <span id="CheckpasswordError" class="error"></span>
@@ -89,9 +91,17 @@
             </div>
 
             <div class="form-group">
-                <i class="fa fa-heart icon"></i>
-                <input type="text" id="hobbies" placeholder="your favorite..."><br>
+                
+                <!-- <input type="text" id="hobbies" placeholder="your favorite..."><br> -->
 
+                <div class="checkbox">
+                    <i class="fa fa-heart icon"></i>
+                    <input type="checkbox" name="Reading id="hobbies" value="Reading">Reading
+                    <input type="checkbox" name="Soccer" id="hobbies" value="Soccer">Soccer
+                    <input type="checkbox" name="Volleyball" id="hobbies" value="Volleyball">Volleyball
+                    <input type="checkbox" name="other" id="hobbies"><input type="text" id="hobbies" placeholder="other..."
+                        class="other-check">
+                </div>
             </div>
             <div class="form-group">
                 <i class="fa fa-book icon"></i>
@@ -100,9 +110,7 @@
             </div>
 
             <button type="button" onclick="SubmitForm()">Submit</button>
-            <div class="form-group">
-                <input type="button" name="button" id="button" onclick="submitForm()" value="Submit">
-            </div>
+
         </form>
 
         <div class="login-link">
